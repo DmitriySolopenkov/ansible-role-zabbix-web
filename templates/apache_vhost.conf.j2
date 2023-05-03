@@ -61,6 +61,7 @@
   php_value max_input_time {{ zabbix_web_max_input_time | default('300') }}
   # Set correct timezone.
   php_value date.timezone {{ zabbix_timezone }}
+  {% endif %}
 {% endif %}
 </VirtualHost>
 
@@ -109,6 +110,7 @@ SSLCryptoDevice {{ zabbix_apache_SSLCryptoDevice }}
     Allow from all
   {% endif %}
   </Directory>
+{% endif %}
 
 {% for my_path in directory_paths %}
   <Directory "{{ my_path }}">
