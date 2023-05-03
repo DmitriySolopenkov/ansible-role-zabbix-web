@@ -1,5 +1,13 @@
 ---
-- src: geerlingguy.apache
-- src: geerlingguy.mysql
+# - src: geerlingguy.apache
+- name: dsolopenkov.apache
+  version: main
+  src: https://github.com/DmitriySolopenkov/ansible-role-apache.git
+
+- name: dsolopenkov.mysql
+  version: main
+  src: https://github.com/DmitriySolopenkov/ansible-role-mysql.git
+
 - src: geerlingguy.postgresql
+
 - src: dj-wasabi.zabbix-server

@@ -56,6 +56,6 @@
   roles:
     - role: geerlingguy.postgresql
       when: inventory_hostname in groups['postgresql']
-    - role: geerlingguy.mysql
+    - role: dsolopenkov.mysql
       when: inventory_hostname in groups['mysql']
     - role: dj-wasabi.zabbix-server
